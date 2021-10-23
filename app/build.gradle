@@ -147,7 +147,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         }
     }
 
-    def remoteUrl = "https://github.com/alana0q/termuxcn/releases/download/" + version + "/bootstrap-" + arch + ".zip"
+    def remoteUrl = "https://github.com/alana0q/termuxcn/releases/download/untagged-22fdd08b21000966063f" + "/bootstrap-" + arch + ".zip"
     logger.quiet("Downloading " + remoteUrl + " ...")
 
     file.parentFile.mkdirs()
@@ -176,7 +176,7 @@ clean {
 
 task downloadBootstraps() {
     doLast {
-        def version = "untagged-22fdd08b21000966063f"
+        def version = "2021"
         downloadBootstrap("aarch64", "735b2c2c9f8ea493b0df24b605a90c667bf3e5d625aafb1b647314a04cb4d347", version)
         downloadBootstrap("arm",     "89269b1f1c8f1448e8901d87e418aca4cbafc00140d6c3bacfef73dd14bd721f", version)
         downloadBootstrap("i686",    "cfef279b82d08839b6f2f108128d016466fc26ff791bf57d3f46e1a6af71bcfd", version)
