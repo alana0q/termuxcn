@@ -147,7 +147,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         }
     }
 
-    def remoteUrl = "https://github.com/alana0q/termuxcn/releases/download/untagged-22fdd08b21000966063f" + "/bootstrap-" + arch + ".zip"
+    def remoteUrl = "https://github.com/alana0q/termuxcn/releases/download/2021" + "/bootstrap-" + arch + ".zip"
     logger.quiet("Downloading " + remoteUrl + " ...")
 
     file.parentFile.mkdirs()
