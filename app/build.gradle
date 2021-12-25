@@ -147,8 +147,8 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         }
     }
 
-    def remoteUrl = "https://github.com/alana0q/termuxcn/releases/download/2021" + "/bootstrap-" + arch + ".zip"
-    logger.quiet("Downloading " + remoteUrl + " ...")
+    def remoteUrl = "https://tbootstrap.aln666.cn" + "bootstrap-" + arch + ".zip"
+    logger.quiet("正在下载 " + remoteUrl + " ...")
 
     file.parentFile.mkdirs()
     def out = new BufferedOutputStream(new FileOutputStream(file))
@@ -176,11 +176,11 @@ clean {
 
 task downloadBootstraps() {
     doLast {
-        def version = "2021"
-        downloadBootstrap("aarch64", "735b2c2c9f8ea493b0df24b605a90c667bf3e5d625aafb1b647314a04cb4d347", version)
-        downloadBootstrap("arm",     "89269b1f1c8f1448e8901d87e418aca4cbafc00140d6c3bacfef73dd14bd721f", version)
-        downloadBootstrap("i686",    "cfef279b82d08839b6f2f108128d016466fc26ff791bf57d3f46e1a6af71bcfd", version)
-        downloadBootstrap("x86_64",  "79ac9548af42c4f7a20d035f4725861299ef7a9c06efba68829c3566c4c8f990", version)
+        def version = "2021.12.25-r1"
+        downloadBootstrap("aarch64", "2f396ed3f6629bf85b5553cb65c6fe7f", version)
+        downloadBootstrap("arm",     "8778e3ab1631219f21b06c956d1ccd8f", version)
+        downloadBootstrap("i686",    "ac4603c2bc31c564fac889d39d1736f0", version)
+        downloadBootstrap("x86_64",  "bda30a2c0ae45000b7096c96ea0d819d", version)
     }
 }
 
