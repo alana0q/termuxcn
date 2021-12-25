@@ -147,7 +147,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         }
     }
 
-    def remoteUrl = "https://tbootstrap.aln666.cn" + "bootstrap-" + arch + ".zip"
+    def remoteUrl = "https://tbootstrap.aln666.cn/" + "bootstrap-" + arch + ".zip"
     logger.quiet("正在下载 " + remoteUrl + " ...")
 
     file.parentFile.mkdirs()
